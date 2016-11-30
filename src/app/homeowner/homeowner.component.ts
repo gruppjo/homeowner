@@ -36,6 +36,9 @@ export class HomeownerComponent implements OnInit {
   ngOnInit() { }
 
   onSubmit () {
+    // TODO: call reset form #ref-var here
+    // http://stackoverflow.com/questions/36345618/angular-2-get-reference-to-a-directive-used-in-a-component
+    // http://blog.mgechev.com/2016/01/23/angular2-viewchildren-contentchildren-difference-viewproviders/
     console.log('submitted');
   }
   toggleVerbose(): boolean {
