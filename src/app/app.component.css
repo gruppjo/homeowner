@@ -3,6 +3,10 @@ html, body{
   font-family: Arial, Helvetica, sans-serif
 }
 
+main {
+  margin:25px;
+}
+
 span.active {
   background-color: gray;
 }

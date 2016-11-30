@@ -1,3 +1,23 @@
-h1 {
+h1, .error {
   color:red;
+}
+
+label {
+  display:block;
+}
+
+input {
+  border:solid 1px grey;
+}
+
+input[type=number] {
+  text-align:right;
+}
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
 }

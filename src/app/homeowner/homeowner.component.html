@@ -1,1 +1,47 @@
 <h1>hi</h1>
+<form
+  #form="ngForm"
+  (ngSubmit)="onSubmit()">
+  <label>
+    Darlehen: in Euro
+    <input type="number" required
+      #spy="ngModel"
+      [(ngModel)]="input.darlehen" name="darlehen">
+      <div [hidden]="!verbose">the current class is {{spy.className}}</div>
+      <div class="error"
+        [hidden]="spy.valid || spy.pristine">
+          Error
+      </div>
+  </label>
+  <label>
+    Inflation: in %
+    <input type="number" required step="any"
+      [(ngModel)]="input.inflation" name="inflation">
+  </label>
+  <label>
+    Sollzins: in %
+    <input type="number" required step="any"
+      [(ngModel)]="input.sollzins" name="sollzins">
+  </label>
+  <label>
+    Tilgung: in %
+    <input type="number" required step="any"
+      [(ngModel)]="input.tilgung" name="tilgung">
+  </label>
+  <label>
+    Laufzeit: in Jahren
+    <input type="number" required step="any"
+      [(ngModel)]="input.laufzeit" name="laufzeit">
+  </label>
+  <button type="submit" class="btn btn-default"
+    [disabled]="form.form.invalid"
+    >Submit</button>
+  <button type="button" class="btn btn-default"
+    (click)="form.reset()">Reset</button>
+  <button type="button"
+    (click)="toggleVerbose()">Verbose</button>
+</form>
+
+<pre
+  [hidden]="!verbose">{{diagnostic}}
+</pre>
