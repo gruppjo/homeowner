@@ -30,6 +30,12 @@ import { AppState } from './app.service';
       </span>
       |
       <span>
+        <a [routerLink]=" ['./homeowner'] ">
+          Homeowner
+        </a>
+      </span>
+      |
+      <span>
         <a [routerLink]=" ['./detail'] ">
           Detail
         </a>
